@@ -1,0 +1,16 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:q="http://qmatic.com" id="http://qmatic.com/widgets/vuejs-widget" version="head" width="1280" height="1024">
+
+    <name>vuejs-widget</name>
+    <description>Test for vuejs and widgets</description>
+
+	<feature name="http://qmatic.com/features/touchprinter-widget" required="true"/>
+	<feature name="http://qmatic.com/features/orchestra-connector" required="true"/>
+
+    <content src="index.html" />
+    <icon src="images/widget.png" />
+    <access origin="*" />
+    <author>Jay Espiritu</author>
+    <licence>Copyright (c) Qmatic Corp. - USA</licence>
+
+    <q:standalone>false</q:standalone>
+</widget>

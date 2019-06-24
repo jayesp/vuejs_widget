@@ -1,0 +1,28 @@
+<project name="vuejs-widget" default="build" basedir=".">
+
+	<echo message="                ********** ${ant.project.name} **********"/>
+
+	<loadproperties>
+		<file file="build.properties"/>
+	</loadproperties>
+
+	<target name="clean">
+		<echo>=== CLEAN ===</echo>
+		<delete file="${build.dir}/${wgt.file}" failonerror="false" />
+	</target>
+
+	<target name="build" depends="clean">
+		<echo>=== BUILD ===</echo>
+		<war destfile="${build.dir}/${wgt.file}" basedir="${src.dir}" needxmlfile='false'>
+			<manifest>
+				<attribute name="Built-By" value="${user.name}"/>
+				<section name="Qmatic Info">
+					<attribute name="Product-Name" value="${product.name}" />
+					<attribute name="Release-Name" value="${release.name}" />
+					<attribute name="Build-Version" value="${build.version}" />
+				</section>
+			</manifest>
+		</war>
+	</target>
+
+</project>
